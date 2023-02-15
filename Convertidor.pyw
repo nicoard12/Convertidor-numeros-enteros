@@ -105,6 +105,12 @@ def BOTON():
 		else:	
 			numfinal= num3digV2(s,i-3,cars,enteros)+" mil "+num3dig(s,i,cars,enteros)
 		return numfinal
+	def num6digV2(s,i,cars,enteros):
+		if (s[i-5]=="0"):
+			numfinal= num5dig(s,i,cars,enteros)
+		else:	
+			numfinal= num3digV2(s,i-3,cars,enteros)+" mil "+num3digV2(s,i,cars,enteros)
+		return numfinal
 	def num7dig(s,i,cars,enteros):
 		if (s[i-6]=="0"):
 			numfinal= num6dig(s,i,cars,enteros)
@@ -144,7 +150,7 @@ def BOTON():
 		if (s[i-11]=="0"):
 			numfinal= num11dig(s,i,cars,enteros)
 		else:
-			numfinal= num6dig(s,i-6,cars,enteros)+" millones "+num6dig(s,i,cars,enteros)
+			numfinal= num6digV2(s,i-6,cars,enteros)+" millones "+num6dig(s,i,cars,enteros)
 		return numfinal
 	def conversion(s):
 		enteros={0:"0",1:"1",2:"2",3:"3",4:"4",5:"5",6:"6",7:"7",8:"8",9:"9",10:"10",11:"11",12:"12",13:"13",14:"14",15:"15",16:"16",17:"17",18:"18",19:"19",20:"20",21:"21",22:"22",23:"23",24:"24",25:"25",26:"26",27:"27",28:"28",29:"29",30:"30",40:"40",50:"50",60:"60",70:"70",80:"80",90:"90",100:"100",200:"200",300:"300",400:"400",500:"500",600:"600",700:"700",800:"800",900:"900",1000:"1000",2000:"2000",3000:"3000",4000:"4000",5000:"5000",6000:"6000",7000:"7000",8000:"8000",9000:"9000"}
